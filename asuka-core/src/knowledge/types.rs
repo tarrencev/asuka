@@ -7,6 +7,7 @@ pub enum Source {
     Github,
     X,
     Twitter,
+    Twitch,
 }
 
 impl Source {
@@ -17,6 +18,7 @@ impl Source {
             Source::Github => "github",
             Source::X => "x",
             Source::Twitter => "twitter",
+            Source::Twitch => "twitch",
         }
     }
 }
@@ -31,6 +33,7 @@ impl FromStr for Source {
             "github" => Ok(Source::Github),
             "x" => Ok(Source::X),
             "twitter" => Ok(Source::Twitter),
+            "twitch" => Ok(Source::Twitch),
             _ => Err(()),
         }
     }
